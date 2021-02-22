@@ -1,36 +1,59 @@
 # Report for assignment 3
 
-This is a template for your report. You are free to modify it as needed.
-It is not required to use markdown for your report either, but the report
-has to be delivered in a standard, cross-platform format.
-
 ## Project
 
-Name:
+Name: Algorithms
 
-URL:
+URL: [https://github.com/williamfiset/Algorithms](https://github.com/williamfiset/Algorithms)
 
-One or two sentences describing it
+This repository has a lot of algorithms and data structures implemented with Java.
 
 ## Onboarding experience
 
-Did it build and run as documented?
-    
-See the assignment for details; if everything works out of the box,
-there is no need to write much here. If the first project(s) you picked
-ended up being unsuitable, you can describe the "onboarding experience"
-for each project, along with reason(s) why you changed to a different one.
+### Did it build and run as documented?
 
+There was not much documentation about running tests but the project uses gradle and `gradle test` ran all the tests and produced a nice web interface with the reports from the test.
+
+### Previous choice
+
+We chose the repo `phishman3579/java-algorithms-implementation` before we noticed three other groups already chosen this repo, forcing us to change to another.
 
 ## Complexity
 
-1. What are your results for ten complex functions?
-   * Did all methods (tools vs. manual count) get the same result?
-   * Are the results clear?
+1. What are your results for eight complex functions?
+   1. From the lizard tool:
+      * LongestCommonPrefixArray::SuffixArray::construct (17)
+      * SubstringVerificationSuffixArray::SuffixArray::construct (17)
+      * LongestRepeatedSubstring::SuffixArray::construct (17)
+      * GenericSegmentTree::GenericSegmentTree (24)
+      * SuffixArrayFast::construct (17)
+      * TreeIsomorphismWithBfs::encodeTree (17)
+      * TspDynamicProgrammingIterative::solve (23)
+      * LineSegmentLineSegmentIntersection::lineSegmentLineSegmentIntersection (20)
+   2. Manual count
+      * 1
+      * 2
+      * 3
+      * 4
+   3. Did all methods (tools vs. manual count) get the same result?
+
+   4. Are the results clear?
+
 2. Are the functions just complex, or also long?
+
+They are generally somewhat long, averaging at 30-40 lines of code.
+
 3. What is the purpose of the functions?
+
+Many of the functions are constructors. They include lots of different
+
 4. Are exceptions taken into account in the given measurements?
+
+Not really, there are many if-statements only for throwing exceptions for different edge cases, this should not be counted when doing a manual count.
+
 5. Is the documentation clear w.r.t. all the possible outcomes?
+
+There is generally not much good documentation/ comments in the code and lacking Javadoc.
 
 ## Refactoring
 
