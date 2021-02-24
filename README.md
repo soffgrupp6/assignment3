@@ -6,13 +6,15 @@ Name: Algorithms
 
 URL: [https://github.com/williamfiset/Algorithms](https://github.com/williamfiset/Algorithms)
 
-This repository has a lot of algorithms and data structures implemented with Java.
+This repository a variety of algorithms and data structures implemented with Java.
 
 ## Onboarding experience
 
-### Did it build and run as documented?
+### Build and run
 
-There was not much documentation about running tests but the project uses gradle and `gradle test` ran all the tests and produced a nice web interface with the reports from the test.
+There was not much documentation about running tests, but the project uses gradle and `gradle test` ran all the tests and produced a nice web interface with the reports from the test. There is also doucmentation about how to run single algorithms using gradle, or only using a JDK.
+
+Except for gradle, no additional tools or components were needed for running this software.
 
 ### Previous choice
 
@@ -30,30 +32,32 @@ We chose the repo `phishman3579/java-algorithms-implementation` before we notice
       * TreeIsomorphismWithBfs::encodeTree (17)
       * TspDynamicProgrammingIterative::solve (23)
       * LineSegmentLineSegmentIntersection::lineSegmentLineSegmentIntersection (20)
-   2. Manual count
-      * 1
-      * 2
-      * 3
-      * 4
-   3. Did all methods (tools vs. manual count) get the same result?
 
-   4. Are the results clear?
+   2. Manual count
+      * GenericSegmentTree::GenericSegmentTree (22.5)
+      * TreeIsomorphismWithBfs::encodeTree (20)
+      * TspDynamicProgrammingIterative::solve (18)
+      * LineSegmentLineSegmentIntersection::lineSegmentLineSegmentIntersection (31)
+
+3. Did all methods (tools vs. manual count) get the same result? Are the results clear?
+
+The results were different when counted manually and by the tool. The results also differed between different manual counts. The main reason was probably that there are different interpretations as to what should be counted and and how. There are different models for counting to start with. We used [this](https://en.wikipedia.org/wiki/Cyclomatic_complexity), but even within this model interpretations about what for example classifies as a connected component, or whether if-statements with muliple conditions should be counted once or once per condition, differed. We also discussed how to count double edges, and different interpretations gave different answers for the count.
 
 2. Are the functions just complex, or also long?
 
-They are generally somewhat long, averaging at 30-40 lines of code.
+They are generally somewhat long, averaging at 30-40 lines of code. This is clearly above average length for functions in the code: most modules have functions with an average around 10 non-comment lines of code.
 
 3. What is the purpose of the functions?
 
-Many of the functions are constructors. They include lots of different
+Many of the functions are constructors. They set up instances of different data structures.
 
 4. Are exceptions taken into account in the given measurements?
 
-Not really, there are many if-statements only for throwing exceptions for different edge cases, this should not be counted when doing a manual count.
+No, we did not take this into account when counting manually. There are many if-statements only for throwing exceptions for different edge cases. This should not be counted when doing a manual count.
 
 5. Is the documentation clear w.r.t. all the possible outcomes?
 
-There is generally not much good documentation/ comments in the code and lacking Javadoc.
+There is generally not much good comments in the code and it is lacking Javadoc. There are definitely outcomes that are not documented.
 
 ## Refactoring
 
