@@ -41,7 +41,7 @@ We chose the repo `phishman3579/java-algorithms-implementation` before we notice
 
 3. Did all methods (tools vs. manual count) get the same result? Are the results clear?
 
-The results were different when counted manually and by the tool. The results also differed between different manual counts. The main reason was probably that there are different interpretations as to what should be counted and and how. There are different models for counting to start with. We used [this](https://en.wikipedia.org/wiki/Cyclomatic_complexity), but even within this model interpretations about what for example classifies as a connected component, or whether if-statements with muliple conditions should be counted once or once per condition, differed. We also discussed how to count double edges, and different interpretations gave different answers for the count.
+The results were different when counted manually and by the tool. The results also differed between different manual counts. The main reason was probably that there are different interpretations as to what should be counted and and how. There are different models for counting to start with. We used [this](https://en.wikipedia.org/wiki/Cyclomatic_complexity), but even within this model interpretations about what for example classifies as a connected component, or whether if-statements with multiple conditions should be counted once or once per condition, differed. We also discussed how to count double edges, and different interpretations gave different answers for the count.
 
 2. Are the functions just complex, or also long?
 
@@ -50,6 +50,11 @@ They are generally somewhat long, averaging at 30-40 lines of code. This is clea
 3. What is the purpose of the functions?
 
 Many of the functions are constructors. They set up instances of different data structures.
+
+- The lineSegmentLineSegmentIntersection function takes two lines segments and calculates the intersection of them and then returns the intersection. It has many different cases for how line segments intersect each other.
+- The TspDynamicProgrammingIterative::solve function is as the name suggests a TSP instance solver.
+- GenericSegmentTree is a class that implements a segment tree where the constructor sets up different segment combination functions depending on the input
+- TreeIsomorphismWithBfs::encodeTree takes a tree and encodes it as a string in a way that represents all isomorphic trees the same way.
 
 4. Are exceptions taken into account in the given measurements?
 
