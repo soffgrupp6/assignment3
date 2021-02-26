@@ -17,9 +17,9 @@ We went for the following P+ criteria:
 - You carry out some of Task 3: you refactor at least two of the functions (per group) with high cyclomatic complexity to reduce it by at least 35%.
 - Something extraordinary
 
-#### Extraordinary
+### Remarkable
 
-TODO
+For this project we would like to bring forward the project report itself. A lot of time and effort has been put into the project report to make it as detailed, clear and readable as possible. We made sure that each member contributed a fair amount to the project by utilising Github issues and assigning members in a fair manner, and also made sure to read and review each others changes to be able to provide feedback and make the learning experience as good as possible.
 
 ## Onboarding experience
 
@@ -539,6 +539,9 @@ The plan for refactoring GenericSegmentTree is to move the part of the code sett
 
 #### encodeTree
 The plan for refactoring encodeTree is to move out several smaller blocks to helper methods: the bfs for finding all leaf nodes could be written in a separate findLeafNodes() method, and updating parent nodes could be written in a updateParentLabel() method. This would also improve readability, since these methods have a clear and distinct functionality and could be broken out without being confusing. This would, however, lead to many methods that might only be used few times in the class.
+
+#### TspDynamicProgrammingIterative 
+The plan for refactoring TspDynamicProgrammingIterative is to firstly move the for-loop which creates the memo table from the outgoing edges to a separate function. This way we can separate the initialization of the data structure and the operations later performed on it. Then the for-loop which minimizes the cost of the tour would also be moved to a separate function, since this would improve readability quite a lot. Another thing that would be moved to a separate function is the reconstruction of the TSP path from the memo table, since it is more in the sense of reformatting the end-result memo table than actually solving the problem. This way we can separate the problem-solving and the result representation and formatting to make the code more readable and clear.
 
 ### Carried out refactoring:
 
