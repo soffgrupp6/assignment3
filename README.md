@@ -21,6 +21,8 @@ We went for the following P+ criteria:
 
 For this project we would like to bring forward the project report itself. A lot of time and effort has been put into the project report to make it as detailed, clear and readable as possible. We made sure that each member contributed a fair amount to the project by utilising Github issues and assigning members in a fair manner, and also made sure to read and review each others changes to be able to provide feedback and make the learning experience as good as possible.
 
+We also made sure to put quite a lot of effort into assessing and thinking about what we could have done better and what to improve for the next project, which can be read about in the Self-Assessment section. We believe that it is of great importance to be critical and always think of ways you can improve as a group, to make the collaboration as stimulating and efficient as possible.
+
 ## Onboarding experience
 
 ### Build and run
