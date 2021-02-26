@@ -83,7 +83,7 @@ There is generally not much good comments in the code and it is lacking Javadoc.
 
 We used Jacoco and it was only a matter of adding a few lines to the Gradle build file to make it work and generate a HTML website with coverage measurement results. It was very easy to integrate and required no installation if you had the right version of Gradle and Java running on your system.
 
-One problem was, however, that it did not work for all versions of Java. If you had a version that was too new, it was very hard to get it to work.
+Unfortunately several members of the group had problems running it because of it's dependance on old Java versions.
 
 ### Your own coverage tool
 
@@ -532,7 +532,7 @@ index 7eaf200..e1cbc53 100644
 The plan for refactoring the LineSegment function is to *move the handling of collinear line segments* to a helper function, thus reducing the complexity of the function. The collinear line segments are calculated in one if-statement block and is very suitable for refactoring. These changes might, however, make the code less easy to follow.
 
 #### GenericSegmentTree
-The plan for refactoring GenericSegmentTree is to move the part of the code setting SegmentCombinationFn and RangeUpdateFn to a helper function to get separation and a better overview of what the function really does. This fits quite well since that part is the very heavily branched part consisting of many if statements.
+The plan for refactoring GenericSegmentTree is to move the part of the code setting SegmentCombinationFn and RangeUpdateFn to a helper function to get separation and a better overview of what the function really does. This fits quite well since that part is the very heavily branched part consisting of many if statements and it is pretty trivial to move it out.
 
 #### encodeTree
 The plan for refactoring encodeTree is to move out several smaller blocks to helper methods: the bfs for finding all leaf nodes could be written in a separate findLeafNodes() method, and updating parent nodes could be written in a updateParentLabel() method. This would also improve readability, since these methods have a clear and distinct functionality and could be broken out without being confusing. This would, however, lead to many methods that might only be used few times in the class.
