@@ -237,12 +237,15 @@ index 0000000..e6caa68
 ### Evaluation
 
 1. How detailed is your coverage measurement?
+
 It is quite detailed but differed slightly from the automatic tools. Our functions had approximately 15-25 branches that the tool considered.
 
-2. What are the limitations of your own tool?
+1. What are the limitations of your own tool?
+
 One major limitation is that you have to manually add a line of code for each branch that you would like to have included in the test. Some other limitations are that it does not support conditionals like || and &&, or ternary operators. These would have to be broken up into several statements.
 
-3. Are the results of your tool consistent with existing coverage tools?
+1. Are the results of your tool consistent with existing coverage tools?
+
 Yes, it proved to be relatively consistent with Jacoco.
 
 ## Coverage improvement
