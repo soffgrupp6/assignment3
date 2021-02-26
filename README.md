@@ -68,6 +68,8 @@ There is generally not much good comments in the code and it is lacking Javadoc.
 
 Plan for refactoring complex code:
 
+- GenericSegmentTree, there is a big code if else block to set a few variables in the function, this is pretty trivial code and could easily be moved to a helper function to reduce complexity.
+
 Estimated impact of refactoring (lower CC, but other drawbacks?).
 
 Carried out refactoring (optional, P+):
@@ -80,8 +82,8 @@ git diff ...
 
 Document your experience in using a "new"/different coverage tool.
 
-How well was the tool documented? Was it possible/easy/difficult to
-integrate it with your build environment?
+We used jacoco to test the branch coverage, it was easy to integrate in our build environment (gradle) but unfortunately several members of the group had problems running it because of it's dependance on old Java versions. 
+The tool is well documented and fairly easy to use (when it works).
 
 ### Your own coverage tool
 
@@ -116,7 +118,7 @@ Test cases added:
 
 git diff ...
 
-Number of test cases added: two per team member (P) or at least four (P+).
+Number of test cases added: All members of the group added at least 4 coverage improving tests each. 
 
 ## Self-assessment: Way of working
 
